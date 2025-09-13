@@ -4,28 +4,18 @@ let coinCount = 100;
 let copyCount = 0;
 let callHistory = [];
 
-// // select elements
-// const copyBtnNavbar = document.querySelector("header button");
-// const historyList = document.getElementById("cart-box");
-// const cardsContainer = document.getElementById("emergency-container");
+// select elements
+const copyBtnNavbar = document.querySelector("header button");
+const historyList = document.getElementById("cart-box");
+const cardsContainer = document.getElementById("emergency-container");
 
-// function functionNavbar() {
-//   document.getElementById("heart-count").innerText = heartCount;
-//   document.getElementById("coin-count").innerText = coinCount;
-//   document.getElementById("copy-count").innerText = copyCount;
-// }
-
-
-navbar update function
 function functionNavbar() {
-  document.querySelectorAll(".bg-violet-200")[0].innerHTML =
-    `<img src="/assets/heart.png" class="h-[15px] w-[20px]" alt=""> <span>${heartCount}</span>`;
-  document.querySelectorAll(".bg-violet-200")[1].innerHTML =
-    `<img src="/assets/coin.png" class="h-[15px] w-[20px]" alt=""> <span>${coinCount}</span>`;
-  copyBtnNavbar.innerText = `Copy ${copyCount}`;
+  document.getElementById("heart-count").innerText = heartCount;
+  document.getElementById("coin-count").innerText = coinCount;
+  document.getElementById("copy-count").innerText = copyCount;
 }
 
-heart function
+// heart function
 function handleHeart() {
   heartCount += 1;
   functionNavbar();
